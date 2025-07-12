@@ -19,7 +19,7 @@ db.once('open', () => {
 });
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://webosbyprathamesh.vercel.app',
   credentials: true
 }));
 
