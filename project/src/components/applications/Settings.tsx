@@ -12,7 +12,7 @@ import {
   Keyboard
 } from 'lucide-react';
 
-const API_URL = 'http://localhost:5000/api/settings';
+const API_URL = 'https://webos-1.onrender.com/settings';
 
 const accentColors = ['orange', 'blue', 'green', 'purple', 'red'];
 const resolutions = [

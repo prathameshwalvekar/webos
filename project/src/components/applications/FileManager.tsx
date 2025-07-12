@@ -4,7 +4,7 @@ import { useWindowContext } from '../../context/WindowContext';
 import TextEditor from './TextEditor';
 import TerminalApp from './Terminal';
 
-const API_URL = 'http://localhost:5000/api/files';
+const API_URL = 'https://webos-1.onrender.com/files';
 
 interface FileItem {
   name: string;

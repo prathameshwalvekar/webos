@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Desktop from './components/Desktop';
 import { WindowProvider } from './context/WindowContext';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://webos-1.onrender.com';
 
 function App() {
   const [session, setSession] = useState<{ loggedIn: boolean; username?: string } | null>(null);

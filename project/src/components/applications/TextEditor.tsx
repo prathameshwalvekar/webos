@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Save, FileText, Bold, Italic, Underline } from 'lucide-react';
 
-const API_URL = 'http://localhost:5000/api/files/write';
+const API_URL = 'https://webos-1.onrender.com/files/write';
 
 interface TextEditorProps {
   filename?: string;

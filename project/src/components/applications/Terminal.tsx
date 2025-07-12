@@ -88,7 +88,7 @@ const TerminalApp: React.FC = () => {
       } else {
         // Send to backend
         try {
-          const res = await fetch('http://localhost:5000/api/terminal', {
+          const res = await fetch('https://webos-1.onrender.com/terminal', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ command })
