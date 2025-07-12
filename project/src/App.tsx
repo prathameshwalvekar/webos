@@ -14,14 +14,14 @@ function App() {
 
   // Check session on mount
   useEffect(() => {
-    fetch(`${API_URL}/auth/status`, { credentials: 'include' })
+    fetch(`${API_URL}/api/auth/status`, { credentials: 'include' })
       .then(res => res.json())
       .then(data => setSession(data));
   }, []);
 
   // Fetch users for login/register
   useEffect(() => {
-    fetch(`${API_URL}/auth/users`, { credentials: 'include' })
+    fetch(`${API_URL}/api/auth/users`, { credentials: 'include' })
       .then(res => res.json())
       .then(setUsers);
   }, [showRegister]);
@@ -29,7 +29,7 @@ function App() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-    const res = await fetch(`${API_URL}/auth/login`, {
+    const res = await fetch(`${API_URL}/api/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -45,7 +45,7 @@ function App() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-    const res = await fetch(`${API_URL}/auth/register`, {
+    const res = await fetch(`${API_URL}/api/auth/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -61,7 +61,7 @@ function App() {
   };
 
   const handleLogout = async () => {
-    await fetch(`${API_URL}/auth/logout`, { method: 'POST', credentials: 'include' });
+    await fetch(`${API_URL}/api/auth/logout`, { method: 'POST', credentials: 'include' });
     setSession({ loggedIn: false });
   };
 
